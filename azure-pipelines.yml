@@ -23,6 +23,7 @@ steps:
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
+    msbuildArgs: '/p:DeployOnBuild=true /p:webPublishMethod=Package /p:PackageAsSingleFile=true /P:SkipInvali'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
@@ -30,3 +31,4 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
