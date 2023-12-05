@@ -6,7 +6,7 @@
 trigger:
 - master
 
-pool: mycomputer
+pool: mycomputeragent
 
 variables:
   solution: '**/*.sln'
